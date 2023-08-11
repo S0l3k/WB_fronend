@@ -1,0 +1,82 @@
+.slider
+  background-color: #B4D1E0
+  &-container
+    width: 1151px
+    height: 570px
+    margin: auto
+    margin-bottom: 50px
+
+.swiper
+  position: relative
+  &-wrapper
+    width: 1151px
+    height: 570px
+  &-slide
+    height: 370px
+    &__item
+  &-button
+    position: absolute
+    z-index: 100
+    top: 50%
+    transform: translateY(-50%)
+    width: 60px
+    height: 60px
+    border-radius: 100px
+    border: none
+    cursor: pointer
+    opacity: 35%
+    &--prev
+      left: 0px
+      background-image: url('/img/arrow-prev.svg')
+    &--next
+      right: 0px
+      background-image: url('/img/arrow-next.svg')
+
+.slide
+  &-info
+    width: 458px
+    height: 370px
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    position: absolute
+    margin-top: 90px
+    margin-left: 103px
+  &-img
+    margin-left: 309px
+
+.info
+  &__label
+    width: 77px
+    height: 25px
+    background-color: #3DC47E
+    padding: 5px 12px
+    border-radius: 3px
+    color: white
+    line-height: 15px
+    font-size: 12px
+    margin-bottom: 20px
+  &__name
+    width: 458px
+    height: 140px
+    line-height: 70px
+    font-size: 55px
+    font-style: bold
+    margin-bottom: 15px
+  &__description
+    width: 335px
+    height: 90px
+    line-height: 30px
+    font-style: 18px
+    color: #4B5157
+    margin-bottom: 40px
+  &__buy
+    width: 156px
+    height: 40px
+    border-radius: 20px
+    border: 1px solid #4592FF
+    background-color: #4592FF
+    color: white
+  &__price
+    line-height: 20px
+    font-style: 14px

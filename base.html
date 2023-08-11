@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Willberries</title>
+
     <link rel="stylesheet" href="sass/style.css" />
     <link rel="stylesheet" href="sass/_normalize.scss" />
+    <link rel="stylesheet" href="sass/cdn.jsdelivr.net_npm_swiper@10.1.0_swiper-bundle.min.css">
   </head>
+
   <body>
     <header class="header">
       <div class="container">
@@ -18,19 +21,19 @@
           />
           <div class="navbar">
             <div class="navbar-container">
-              <a href="#" class="navbar__item-1">Womens</a>
-              <a href="#" class="navbar__item-2">Mens</a>
-              <a href="#" class="navbar__item-3">Goods</a>
-              <a href="#" class="navbar__item-4">Accessories</a>
-              <a href="#" class="navbar__item-5">Brands</a>
-              <a href="#" class="navbar__item-6">Blog</a>
+              <a href="#" class="navbar__item item-1">Womens</a>
+              <a href="#" class="navbar__item item-2">Mens</a>
+              <a href="#" class="navbar__item item-3">Goods</a>
+              <a href="#" class="navbar__item item-4">Accessories</a>
+              <a href="#" class="navbar__item item-5">Brands</a>
+              <a href="#" class="navbar__item item-6">Blog</a>
             </div>
             <!-- /.navbar-container -->
           </div>
           <!-- /.navbar -->
           <button class="bin">
-            <img src="img/Cart.svg" alt="Icon: Cart" />
-            <span>Cart</span>
+            <img class="bin__img" src="img/Cart.svg" alt="Icon: Cart" />
+            <span class="bin__name">Cart</span>
           </button>
         </div>
         <!-- /.header-container -->
@@ -38,37 +41,59 @@
       <!-- /.container -->
     </header>
 
-    <section class="carousel">
-      <div class="container">
-        <div class="carousel-container">
-          <div class="carousel-info">
-            <span class="label">Bestseller</span>
-            <div class="item-name">Sweater Choker Neck</div>
-            <!-- /.item-name -->
-            <span class="description">
-              Women’s pearl basic knit sweater with around neck. Available in
-              several colours. Free shipping to stores.
-            </span>
-            <button class="buy-now">
-              <span class="price">$319 Shop now</span>
-            </button>
-            <!-- /.buy-now -->
+    <section class="slider">
+      <div class="slider-container">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="slide-info">
+                <span class="info__label">Bestseller</span>
+                <div class="info__name">Sweater Choker Neck</div>
+                <!-- /.info__name -->
+                <span class="info__description">
+                  Women's pearl basic knit sweater <br>
+                  with around neck. Available in several <br> 
+                  colours. Free shipping to stores.
+                </span>
+                <button class="info__buy">
+                  <span class="info__price">$319 Shop now</span>
+                </button>
+                <!-- /.info__buy -->
+              </div>
+              <!-- /.slide-info -->
+              <div class="slide-img">
+                <img src="/img/bg-info_slide_1.png" alt="Image: Item of slider" class="swiper-slide__item" />
+                <!-- Часть изображения заезжает на следующий слайд -->
+              </div>
+              <!-- /.slide-img -->
+            </div>
+          
+            <div class="swiper-slide">
+              Slide 2
+            </div>
+
+            <div class="swiper-slide">
+              Slide 3
+            </div>
+
           </div>
-          <!-- /.carousel-info -->
-          <img src="#" alt="Image: Item of carousel" class="carousel-item" />
+          <!-- If we need navigation buttons -->
+          <button class="swiper-button swiper-button--prev"></button>
+          <button class="swiper-button swiper-button--next"></button>
         </div>
-        <!-- /.carousel-container -->
       </div>
-      <!-- /.container -->
+      <!-- /.slider-container -->
     </section>
-    <!-- /.carousel -->
+    <!-- /.slider -->
 
     <section class="recomendations">
       <div class="container">
-        <div class="collections__container">
-          <div class="collection-kit__item1">
-            <span class="kit__title">Fashion Month Ready in Capital Shop</span>
-            <span class="kit__description">
+        <div class="collection__container">
+          <div class="collection-kit kit__item1">
+            <span class="kit__title--dark">Fashion Month Ready in Capital Shop</span>
+            <span class="kit__description--dark">
               Bags & Acsessories & Lingerie & Sportswear & Beauty & Swimwear
             </span>
             <button class="kit__view">
@@ -76,12 +101,12 @@
               <img src="img/view-arrow.svg" alt="Icon: Arrow" class="arrow" />
             </button>
           </div>
-          <!-- /.collection-kit__item1 -->
-          <div class="collection-kit__item2">
-            <span class="kit__title"
-              >Catch the Sun: Spring Break Styles From $5.99</span
-            >
-            <span class="kit__description">
+          <!-- /.collection-kit kit__item1 -->
+          <div class="collection-kit kit__item2">
+            <span class="kit__title--light">
+              Catch the Sun: Spring Break Styles From $5.99
+            </span>
+            <span class="kit__description--light">
               Sweaters & Hoodies & Puffer Jackets & Coats and Jackets & Knit
             </span>
             <button class="kit__view">
@@ -89,34 +114,29 @@
               <img src="img/view-arrow.svg" alt="Icon: Arrow" class="arrow" />
             </button>
           </div>
-          <!-- /.collection-kit__item2 -->
+          <!-- /.collection-kit kit__item2 -->
         </div>
-        <!-- /.collections__container -->
-        <div class="recomendation-set__container">
-          <div class="recomendation-set__item1">
-            <span class="label">Bestseller</span>
-            <span class="title">Poplin Top With Sleeve Bow</span>
-            <span class="description"
-              >Poplin top with roll neckline, long sleeves
-            </span>
-            <button class="buy-now">$129 Shop now</button>
-            <img src="#" alt="Image: Image of item" class="item-background" />
-            <!-- раелизовать переключение фона из карусели -->
-            <div class="preview-images">
-              <div class="preview-images__container">.</div>
-              <!-- /.preview-images__container -->
+        <!-- /.collection__container -->
+        <div class="set_item__container">
+          <div class="set_item__first">
+          </div>
+          <!-- /.set_item__first -->
+          
+          <div class="set_item__second">
+            <div class="second-front">
+              <span class="front__name">Printed Shirt with a Bow</span>
+              <span class="front__color">Pink/Sky Blue/Yellow</span>
+              <span class="front__price">$129</span>
             </div>
-            <!-- /.preview-images -->
+            <!-- /.second-front -->
+            <div class="second-back">
+              <img src="/img/back_img.png" alt="" class="back_img">
+            </div>
+            <!-- /.second-back -->
           </div>
-          <!-- /.recomendation-set__item1 -->
-          <div class="recomendation-set__item2">
-            <span class="title">Printed Shirt with a Bow</span>
-            <span class="description">Pink/Sky Blue/Yellow</span>
-            <span class="price">$129</span>
-          </div>
-          <!-- /.recomendation-set__item2 -->
+          <!-- /.set_item__second -->
         </div>
-        <!-- /.recomendation-set__container -->
+        <!-- /.set_item__container -->
       </div>
       <!-- /.container -->
     </section>
@@ -124,10 +144,13 @@
 
     <section class="new-arrivals">
       <div class="container">
-        <span class="titel">New Arrival</span>
-        <a href="#" class="view-all">View All</a>
-        <div class="arrival__container">
-          <div class="arrival_item1">
+        <div class="new-arrivals__head head">
+          <span class="head__title">New Arrival</span>
+          <a href="#" class="head__view-all">View All</a>
+        </div>
+        <!-- /.new-arrivals__head -->
+        <div class="arrival-container">
+          <div class="arrival-item item__1">
             <span class="label">New</span>
             <img
               src="img/arrival-item1.svg"
@@ -138,8 +161,8 @@
             <span class="color">Yellow/Lilac/Fuchsia/Orange</span>
             <span class="price">$89</span>
           </div>
-          <!-- /.arrival_item1 -->
-          <div class="arrival_item2">
+          <!-- /.arrival-item item__1 -->
+          <div class="arrival-item item__2">
             <span class="label">New</span>
             <img
               src="img/arrival-item2.svg"
@@ -150,8 +173,8 @@
             <span class="color">Navy/Ochre/Black/Khaki</span>
             <span class="price">$139</span>
           </div>
-          <!-- /.arrival_item2 -->
-          <div class="arrival_item3">
+          <!-- /.arrival-item item__2 -->
+          <div class="arrival-item item__3">
             <span class="label">New</span>
             <img
               src="img/arrival-item3.svg"
@@ -162,8 +185,8 @@
             <span class="color">White</span>
             <span class="price">$59</span>
           </div>
-          <!-- /.arrival_item3 -->
-          <div class="arrival_item4">
+          <!-- /.arrival-item item__3 -->
+          <div class="arrival-item item__4">
             <span class="label">New</span>
             <img
               src="img/arrival-item4.svg"
@@ -174,12 +197,124 @@
             <span class="color">Red/Sky Blue</span>
             <span class="price">$119</span>
           </div>
-          <!-- /.arrival_item4 -->
+          <!-- /.arrival-item item__4 -->
         </div>
-        <!-- /.arrival__container -->
+        <!-- /.arrival-container -->
       </div>
       <!-- /.container -->
     </section>
     <!-- /.new-arrivals -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-info">
+          <div class="info-up">
+            <div class="up-link">
+              <a href="" class="link link__shop">
+                <span class="link__name">Shop</span>
+              </a>
+              <a href="" class="link link__about">
+                <span class="link__name">About Us</span>
+              </a>
+              <a href="" class="link link__careers">
+                <span class="link__name">Careers</span>
+              </a>
+              <a href="" class="link link__faq">
+                <span class="link__name">FAQ</span>
+              </a>
+              <a href="" class="link link__blog">
+                <span class="link__name">Blog</span>
+              </a>
+              <a href="" class="link link__contacts">
+                <span class="link__name">Contacts</span>
+              </a>
+            </div>
+            <!-- /.up-link -->
+            <div class="up-social">
+              <span class="social__links">Follow Us</span>
+              <a href="" class="social__fb">
+                <img 
+                src="img/Facebook.svg" 
+                alt="Icon: Facebook" 
+                class="fb">
+              </a>
+              <a href="" class="social__tw">
+                <img 
+                src="img/Twitter.svg" 
+                alt="Icon: Twitter" 
+                class="tw">
+              </a>
+              <a href="" class="social__inst">
+                <img 
+                src="img/Instagram.svg" 
+                alt="Icon: Instagram" 
+                class="inst">
+              </a>
+            </div>
+            <!-- /.up-social -->
+            <div class="up-copyright">
+              <a href="" class="copyright_link">
+                <span class="copyright_text">
+                  © 2019 Universal UI Kit
+                </span>
+              </a>
+            </div>
+            <!-- /.up-copyright -->
+          </div>
+          <!-- /.info-up -->
+
+          <div class="footer__line">
+          </div>
+          <!-- /.footer__line -->
+
+          <div class="info-down">
+            <div class="down-payments">
+              <a href="" class="payments__visa">
+                <img 
+                src="img/visa.svg" 
+                alt="" 
+                class="visa_img">
+              </a>
+              <a href="" class="payments__mastercard">
+                <img 
+                src="img/mastercard.svg" 
+                alt="" 
+                class="mastercard_img">
+              </a>
+              <a href="" class="payments__paypal">
+                <img 
+                src="img/paypal.svg" 
+                alt="" 
+                class="paypal_img">
+              </a>
+              <a href="" class="payments__bitcoin">
+                <img 
+                src="img/bitcoin.svg" 
+                alt="" 
+                class="bitcoin_img">
+              </a>
+            </div>
+            <!-- /.down-payments -->
+            <div class="button_top">
+              <span class="button__text">Top</span>
+              <button onclick="topFunction()" class="button__button">
+                <img 
+                src="img/arrow_top.svg" 
+                alt="Icon: Button top arrow" 
+                class="button__img">
+              </button>
+            </div>
+            <!-- /.button_top -->
+          </div>
+          <!-- /.info-down -->
+        </div>
+        <!-- /.footer-info -->
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <script src="js/cdn.jsdelivr.net_npm_swiper@10.1.0_swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/top.js"></script>
   </body>
 </html>
